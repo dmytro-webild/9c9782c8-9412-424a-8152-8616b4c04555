@@ -2,6 +2,7 @@
 
 import { ThemeProvider } from "@/providers/themeProvider/ThemeProvider";
 import ReactLenis from "lenis/react";
+import { useState } from "react";
 import AboutMetric from '@/components/sections/about/AboutMetric';
 import ContactText from '@/components/sections/contact/ContactText';
 import FeatureBorderGlow from '@/components/sections/feature/featureBorderGlow/FeatureBorderGlow';
@@ -14,6 +15,8 @@ import TestimonialCardTwelve from '@/components/sections/testimonial/Testimonial
 import { Award, Calendar, CheckCircle, DollarSign, ShieldCheck, Star, Users, Zap } from "lucide-react";
 
 export default function LandingPage() {
+  const [isQuoteOpen, setIsQuoteOpen] = useState(false);
+
   return (
     <ThemeProvider
         defaultButtonVariant="shift-hover"
@@ -46,10 +49,11 @@ export default function LandingPage() {
       description="Stay Comfortable Year-Round — Fast, Reliable HVAC Service. From emergency repairs to full system installs, we deliver expert comfort solutions."
       buttons={[
         { text: "Call Now: (770) 718-6266", href: "tel:7707186266" },
-        { text: "Book Service Online", href: "#contact" },
+        { text: "Get Free Instant Quote", onClick: () => setIsQuoteOpen(true) },
       ]}
       imageSrc="http://img.b2bpic.net/free-photo/hvac-technician-servicing-outdoor-unit_482257-12345.jpg"
       imageAlt="Professional HVAC technician servicing unit"
+      className="pt-16 pb-8"
     />
   </div>
 
@@ -116,6 +120,10 @@ export default function LandingPage() {
       cardTag="5-Star Service"
       cardAnimation="slide-up"
     />
+    <div className="px-4 py-8 text-center">
+        <h3 className="text-xl font-bold mb-4">Verified Google Reviews</h3>
+        <iframe src="https://widgets.google.com/reviews" title="Google Reviews" className="w-full max-w-2xl h-80 border-0 mx-auto rounded-lg shadow-sm" loading="lazy"></iframe>
+    </div>
   </div>
 
   <div id="financing" data-section="financing">
@@ -163,6 +171,19 @@ export default function LandingPage() {
     />
   </div>
       </ReactLenis>
+      {isQuoteOpen && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm">
+              <div className="bg-white p-8 rounded-lg max-w-md w-full shadow-2xl relative">
+                  <button onClick={() => setIsQuoteOpen(false)} className="absolute top-2 right-2 p-2">✕</button>
+                  <h2 className="text-2xl font-bold mb-4">Request a Quote</h2>
+                  <p className="mb-6">Fill out your details for a quick estimate.</p>
+                  <input type="text" placeholder="Your Name" className="w-full p-3 mb-4 border rounded" />
+                  <input type="email" placeholder="Your Email" className="w-full p-3 mb-4 border rounded" />
+                  <textarea placeholder="Project Details" className="w-full p-3 mb-4 border rounded" rows={4}></textarea>
+                  <button className="w-full p-3 bg-blue-600 text-white rounded font-bold">Submit</button>
+              </div>
+          </div>
+      )}
     </ThemeProvider>
   );
 }
