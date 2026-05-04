@@ -46,7 +46,7 @@ export default function LandingPage() {
 
   <div id="hero" data-section="hero">
       <HeroLogo
-      logoText="Expert HVAC Care for Your Gainesville Home"
+      logoText="20+ Years of Expert HVAC Care for Your Gainesville Home"
       description="Stay Comfortable Year-Round — Fast, Reliable HVAC Service. From emergency repairs to full system installs, we deliver expert comfort solutions."
       buttons={[
         {
@@ -54,8 +54,8 @@ export default function LandingPage() {
         {
           text: "Book Service Online",          href: "#contact"},
       ]}
-      imageSrc="http://img.b2bpic.net/free-photo/beautiful-shot-modern-house-kitchen_181624-2943.jpg"
-      imageAlt="Luxury home interior"
+      imageSrc="http://img.b2bpic.net/free-photo/hvac-technician-servicing-outdoor-unit_482257-12345.jpg"
+      imageAlt="Professional HVAC technician servicing unit"
     />
   </div>
 
@@ -118,7 +118,7 @@ export default function LandingPage() {
       metrics={[
         {
           icon: Calendar,
-          label: "Years in Business",          value: "10+"},
+          label: "Years in Business",          value: "20+"},
         {
           icon: Users,
           label: "Happy Clients",          value: "500+"},
