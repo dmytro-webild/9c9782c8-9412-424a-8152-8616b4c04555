@@ -51,7 +51,7 @@ export default function LandingPage() {
         { text: "Call Now: (770) 718-6266", href: "tel:7707186266" },
         { text: "Get Free Instant Quote", onClick: () => setIsQuoteOpen(true) },
       ]}
-      imageSrc="http://img.b2bpic.net/free-photo/hvac-technician-performing-maintenance-system-modern-home_482257-22446.jpg"
+      imageSrc="https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3DEuosDsGg4Com4H2LG6ARKHXIx/uploaded-1777862590330-5use8e77.jpg"
       imageAlt="Professional HVAC technician servicing unit"
       className="pt-16 pb-8"
     />
