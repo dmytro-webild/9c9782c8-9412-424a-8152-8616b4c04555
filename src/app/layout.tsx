@@ -6,6 +6,7 @@ import "@/lib/gsap-setup";
 import { ServiceWrapper } from "@/components/ServiceWrapper";
 import { getVisualEditScript } from "@/utils/visual-edit-script";
 import { Mulish } from "next/font/google";
+import { Lato } from "next/font/google";
 
 
 
@@ -20,7 +21,12 @@ export const metadata: Metadata = {
   },
 };
 
-const mulish = Mulish({ variable: "--font-mulish", subsets: ["latin"] });
+
+const lato = Lato({
+  variable: "--font-lato",
+  subsets: ["latin"],
+  weight: ["100", "300", "400", "700", "900"],
+});
 
 export default function RootLayout({
   children,
@@ -30,7 +36,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <ServiceWrapper>
-        <body className={`${mulish.variable} antialiased`}>
+        <body className={`${lato.variable} antialiased`}>
           
           {children}
           <script
