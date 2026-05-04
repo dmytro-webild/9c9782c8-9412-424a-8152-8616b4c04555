@@ -51,7 +51,7 @@ export default function LandingPage() {
         { text: "Call Now: (770) 718-6266", href: "tel:7707186266" },
         { text: "Get Free Instant Quote", onClick: () => setIsQuoteOpen(true) },
       ]}
-      imageSrc="http://img.b2bpic.net/free-photo/hvac-technician-servicing-outdoor-unit_482257-12345.jpg"
+      imageSrc="http://img.b2bpic.net/free-photo/hvac-technician-performing-maintenance-system-modern-home_482257-22446.jpg"
       imageAlt="Professional HVAC technician servicing unit"
       className="pt-16 pb-8"
     />
@@ -100,7 +100,7 @@ export default function LandingPage() {
       metrics={[
         { icon: Calendar, label: "Years in Business", value: "20+" },
         { icon: Users, label: "Happy Clients", value: "500+" },
-        { icon: Award, label: "Certified Techs", value: "15+" },
+        { icon: Award, label: "Certified Techs", value: "5+" },
       ]}
       metricsAnimation="slide-up"
     />
@@ -120,10 +120,6 @@ export default function LandingPage() {
       cardTag="5-Star Service"
       cardAnimation="slide-up"
     />
-    <div className="px-4 py-8 text-center">
-        <h3 className="text-xl font-bold mb-4">Verified Google Reviews</h3>
-        <iframe src="https://widgets.google.com/reviews" title="Google Reviews" className="w-full max-w-2xl h-80 border-0 mx-auto rounded-lg shadow-sm" loading="lazy"></iframe>
-    </div>
   </div>
 
   <div id="financing" data-section="financing">
